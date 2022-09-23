@@ -1,0 +1,28 @@
+h1{
+    text-align: center;
+}
+#red{
+    color:red;
+}
+#blue{
+    color:blue;
+}
+#green{
+    color: green;
+}
+#yellow{
+    color: yellow;
+}
+
+.output{
+    margin-top:20px;
+}
+
+select{
+    margin: 10px;
+    transform: scale(1.2);
+}
+button{
+    margin-left: 20px;
+    transform: scale(1.1);
+}

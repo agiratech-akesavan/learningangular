@@ -1,0 +1,32 @@
+
+<h1>ngIf</h1>
+
+<h3 *ngIf="true">Hello</h3>
+<h3 *ngIf="false">Hello</h3>
+
+<h3 *ngIf="value">the hidden</h3>
+
+<h3 *ngIf="input; else elseBlock">ngIf is true so output from ngIf condition</h3>
+
+<ng-template  #elseBlock>
+    <h1>else block is opening</h1>
+</ng-template>
+
+<hr>
+
+<h1>ngIf and then , else value</h1>
+
+<div *ngIf="inputs; then thenBlock; else elseBlo"></div>
+
+<!--Then working in the input will be true.
+the input will be false else block will be worked.-->
+
+<ng-template #thenBlock>
+    <h3>ThenBlock working</h3>
+</ng-template>
+
+<ng-template #elseBlo>
+    <h3>ElseBlock working</h3>
+</ng-template>
+
+<hr>

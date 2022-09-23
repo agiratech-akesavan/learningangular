@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TwoWayComponent implements OnInit {
 
+
+  public value:any;
+  
   constructor() { }
 
   ngOnInit(): void {

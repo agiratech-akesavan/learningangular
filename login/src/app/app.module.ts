@@ -3,18 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ReferenceComponent } from './reference/reference.component';
-import { TwoWayComponent } from './two-way/two-way.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ReferenceComponent,
-    TwoWayComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

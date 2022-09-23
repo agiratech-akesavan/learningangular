@@ -1,0 +1,20 @@
+
+<h1>ngSwitch</h1>
+
+<h2>Please pick the you wanted color:</h2>
+<select name="" id="" #myColor>
+    <option value="red">Red</option>
+    <option value="blue">Blue</option>
+    <option value="green">Green</option>
+    <option value="yellow">Yellow</option>
+</select>
+<button (click)="onsubmit(myColor.value)">Submit</button>
+
+<div [ngSwitch]="hasinput" class="output">
+    <div *ngSwitchCase="'red'" [id]="'red'">You picked color red</div>
+    <div *ngSwitchCase="'green'" [id]="'green'">You picked color green</div>
+    <div *ngSwitchCase="'blue'" [id]="'blue'">You picked color blue</div>
+    <div *ngSwitchCase="'yellow'" [id]="'yellow'">You picked color yellow</div>
+    <!-- <div *ngSwitchDefault>doesn't pick color</div> -->
+</div>
+<hr>
