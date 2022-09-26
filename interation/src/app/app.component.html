@@ -1,3 +1,6 @@
 <h1>WelCome the interation</h1>
-{{name}}
-<app-test></app-test>
+
+<p>
+    {{my}} {{message}}
+</p>
+<app-test (childEvent)="message=$event" (input)="my=$event" [parentData]="name"></app-test>

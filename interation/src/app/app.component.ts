@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'interation';
-
-  public name:any="interation";
+  public name:any="k7";
+  public message:any;
+  public my:any
 }

@@ -6,12 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'login';
+  public name:any="onInit name";
+  value=false;
 
-  myFunc(value:any){
-    if(value.length >0){
-      alert("User name is "+value);
-
-    }
+  onInit(){
+    this.value= !this.value;
   }
 }
