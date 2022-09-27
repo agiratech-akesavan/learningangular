@@ -1,0 +1,11 @@
+#header{
+    background-color:antiquewhite !important;
+
+}
+.navbar-brand{
+    font-size:1.3rem !important;
+    font-weight: 550;
+}
+a{
+    color: black !important;
+}
