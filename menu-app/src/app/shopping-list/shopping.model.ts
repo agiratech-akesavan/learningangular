@@ -1,4 +1,9 @@
 
 export class Ingredient{
-    constructor(public name:any, public amount:any){}
+    public name:any;
+    public amount:any;
+    constructor(name:any, amount:any){
+        this.name=name;
+        this.amount=amount;
+    }
 }
