@@ -1,0 +1,8 @@
+<h1>Reactive Form modules</h1>
+
+<form [formGroup]="login" (ngSubmit)="output()">
+  <input type="text" placeholder="Name" formControlName="user">
+  <br><br>
+  <input type="password" placeholder="Password" formControlName="password">
+  <button type="submit" value="submit">Submit</button>
+</form>
