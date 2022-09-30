@@ -1,0 +1,60 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h3 class=" pt-3 pb-3">Registeration Form</h3>
+        </div>
+    </div>
+        <form [formGroup]="login"  (ngSubmit)="output(login.value)">
+            <div class="row">
+                <div class="col-6">
+                    <label for="FirstName"   class="form-label  pt-3 pb-1">First Name</label>
+                    <input type="text" id="FirstName" class="form-control" formControlName="firstName">
+                    <span *ngIf="firstName && firstName.invalid && firstName.touched">Please Enter your name</span>
+                </div>
+                <div class="col-6">
+                    <label for="LastName"  class="form-label pt-3 pb-1">last Name</label>
+                    <input type="text" id="LastName" class="form-control" formControlName="lastName">
+                    <span *ngIf="lastName && lastName.invalid && lastName.touched">Please Enter your name</span>
+                </div>
+                <div class="col-6">
+                    <label for="email"  class="form-label pt-3 pb-1">Email</label>
+                    <input type="email" id="email" class="form-control" formControlName="email">
+                </div>
+                <div class="col-6">
+                    <label for="gender"  class="form-label pt-3 pb-1">Gender</label>
+                    <select name="gender" class="form-select" formControlName="gender">
+                        <option selected disabled hidden>Select</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                <div class="col-6">
+                    <label for="password"  class="form-label pt-3 pb-1">Password</label>
+                    <input type="password" id="password" class="form-control" formControlName="password">
+                </div>
+                <div class="col-6">
+                    <label for="repassword"  class="form-label pt-3 pb-1">ReType Password</label>
+                    <input type="password" id="retypepassword" class="form-control" formControlName="retypepassword">
+                </div>
+                <div class="col-6">
+                    <label for="phone"  class="form-label pt-3 pb-1">Phone Number</label>
+                    <input type="text" id="phone" class="form-control" formControlName="phone">
+                </div>
+                <div class="col-6">
+                    <label for="city"  class="form-label pt-3 pb-1">City</label>
+                    <input type="text" id="city" class="form-control" formControlName="city">
+                </div>
+                <div class="col-6">
+                    <div class="col-3">
+                        <button class="btn btn-success mt-3 p-2 w-100" type="submit">Register</button>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="col-3">
+                        <button (click)="value()" class="btn btn-danger mt-3 p-2 w-100" >Login</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+</div>

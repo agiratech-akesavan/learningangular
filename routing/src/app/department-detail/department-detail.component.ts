@@ -7,12 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DepartmentDetailComponent implements OnInit {
 
-  public value:any=[
-    {"id":1,"longuage":"angular"},
-    {"id":2,"longuage":"react"},
-    {"id":3,"longuage":"fluter"},
-    {"id":4,"longuage":"vue.js"},
-  ]
+
 
   constructor() { }
 

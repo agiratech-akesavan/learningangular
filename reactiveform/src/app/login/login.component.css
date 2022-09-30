@@ -1,0 +1,48 @@
+.header{
+    text-align: center;
+}
+.container{
+    height: 90vh;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    height: 90vh;
+}
+label{
+    display: block;
+}
+button{
+    display: block;
+    border: none;
+    border-radius:3px ;
+    background-color:blue;
+    color: white;
+    font-size:1.3rem ;
+}
+#form{
+    padding: 80px;
+    border: 1px solid black;
+    width:600px;
+    height:500px
+}
+form>h3{
+    text-align: center;
+    background-color: rgb(221, 169, 24);
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+}
+form>label{
+    font-size: 1.3rem;
+}
+p{
+    text-align: center;
+}
+p>span{
+    color:rgb(197, 14, 14);
+    cursor: pointer;
+}
+span{
+    color: red;
+}
