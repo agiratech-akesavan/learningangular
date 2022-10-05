@@ -1,1 +1,38 @@
-<p>website works!</p>
+<div class="container-fluid header">
+  <div class="container head">
+    <div class="row">
+      <div class="col-12">
+        <nav class="navbar navbar-light">
+          <a class="navbar-brand" href="#" id="sitename">
+            <img
+              src="../../assets/image/logo.png"
+              width="30"
+              height="30"
+              class="d-inline-block align-top"
+              alt=""
+            />
+            E-Commerce
+          </a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12 d-flex justify-content-center">
+            <h3>Products Categories</h3>
+        </div>
+        <div class="col-4 mt-5" *ngFor="let item of items">
+                    <div  class="card p-2" style="width: 20rem;">
+                        <img src="{{item.image}}" class="card-img-top" style="height:200px"  alt="...">
+                        <div class="card-body">
+                            <h5  class="card-title">{{item.productName}}</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <button class="btn btn-primary" (click)="prod(item)">Click Here</button>
+                        </div>
+                    </div>                 
+         </div>
+    </div>
+</div>

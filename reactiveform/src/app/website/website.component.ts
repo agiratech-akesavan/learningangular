@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {  Router } from '@angular/router';
+import { ProductService } from '../product.service';
 
 @Component({
   selector: 'app-website',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WebsiteComponent implements OnInit {
 
-  constructor() { }
+  public items:any=[];
+  constructor(public route:Router,public product:ProductService) { }
 
   ngOnInit(): void {
+    this.items=this.product.item;
+  }
+  prod(item:any){
+    this.route.navigateByUrl('website/product/'+item.id);
   }
 
 }

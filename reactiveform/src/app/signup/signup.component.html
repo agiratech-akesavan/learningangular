@@ -20,6 +20,7 @@
                 <div class="col-6">
                     <label for="email"  class="form-label pt-3 pb-1">Email</label>
                     <input type="email" id="email" class="form-control" formControlName="email">
+                    <span *ngIf="email && email.invalid && email.touched">Please Enter your Email</span>
                 </div>
                 <div class="col-6">
                     <label for="gender"  class="form-label pt-3 pb-1">Gender</label>
@@ -28,14 +29,17 @@
                         <option value="male">Male</option>
                         <option value="female">Female</option>
                     </select>
+                    <span *ngIf="gender && gender.invalid && gender.touched">Please select the gender</span> 
                 </div>
                 <div class="col-6">
                     <label for="password"  class="form-label pt-3 pb-1">Password</label>
                     <input type="password" id="password" class="form-control" formControlName="password">
+                    <span *ngIf="password && password.invalid && password.touched">create the password</span>
                 </div>
                 <div class="col-6">
                     <label for="repassword"  class="form-label pt-3 pb-1">ReType Password</label>
                     <input type="password" id="retypepassword" class="form-control" formControlName="retypepassword">
+                    <span *ngIf="retypepassword && retypepassword.invalid && retypepassword.touched">create the password</span>
                 </div>
                 <div class="col-6">
                     <label for="phone"  class="form-label pt-3 pb-1">Phone Number</label>
@@ -47,7 +51,7 @@
                 </div>
                 <div class="col-6">
                     <div class="col-3">
-                        <button class="btn btn-success mt-3 p-2 w-100" type="submit">Register</button>
+                        <button class="btn btn-success mt-3 p-2 w-100" type="submit" (click)="value()" [disabled]="login.invalid">Register</button>
                     </div>
                 </div>
                 <div class="col-6">

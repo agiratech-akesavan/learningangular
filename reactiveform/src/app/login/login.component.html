@@ -12,10 +12,10 @@
                             <input type="text" id="username" #name="ngModel" required name="username" class="form-control" ngModel>
                             <span *ngIf="name.invalid && name.touched">Please Enter your email</span>
                             <label for="password"class="form-label" >password :</label>
-                            <input type="password"   #password="ngModel" name="passowrd" id="password" class="form-control" ngModel>
+                            <input type="password"   #password="ngModel" name="password" id="password" class="form-control" ngModel>
                             <span *ngIf="password.invalid && password.touched">Please Enter your email</span>
                             <div>
-                                <button  class="mt-3 w-100 p-1" (click)="website()" [disabled]="form.invalid">submit</button>
+                                <button type="submit" [disabled]="form.invalid" class="mt-3 w-100 p-1" (click)="website()">submit</button>
                             </div>
                             <p class="mt-3" >Not a Memeber?  <span (click)="page()">sign page</span></p>
                         </form>

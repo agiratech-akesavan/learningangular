@@ -14,10 +14,10 @@ export class SignupComponent implements OnInit {
   login=new FormGroup({
     firstName:new FormControl('',[Validators.required]),
     lastName:new FormControl('',[Validators.required]),
-    email:new FormControl(''),
-    gender:new FormControl(''),
-    password:new FormControl(''),
-    retypepassword:new FormControl(''),
+    email:new FormControl('',[Validators.required,Validators.email]),
+    gender:new FormControl('',[Validators.required]),
+    password:new FormControl('',[Validators.required]),
+    retypepassword:new FormControl('',[Validators.required]),
     phone:new FormControl(''),
     city:new FormControl('')
   });
@@ -32,14 +32,29 @@ export class SignupComponent implements OnInit {
   get lastName():any{
     return this.login.get("lastName");
   }
+  get email():any{
+    return this.login.get("email");
+  }
+  get gender():any{
+    return this.login.get("gender");
+  }
+  get password():any{
+    return this.login.get("password");
+  }
+  get retypepassword():any{
+    return this.login.get("retypepassword");
+  }
 
-  // get email():any{
-  //   return this.login.get("email");
-  // }
+
+
 
   value(){
     this.route.navigate(['/login'])
     // console.log("hello")
+  }
+
+  log(){
+    this.route.navigate(['/login'])
   }
 
   output(value:any){

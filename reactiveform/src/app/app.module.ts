@@ -7,13 +7,16 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { WebsiteComponent } from './website/website.component';
+import { ProductService } from './product.service';
+import { ProductComponent } from './website/product/product.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SignupComponent,
-    WebsiteComponent
+    WebsiteComponent,
+    ProductComponent,
   ],
   imports: [
     BrowserModule,
@@ -21,7 +24,7 @@ import { WebsiteComponent } from './website/website.component';
     ReactiveFormsModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
