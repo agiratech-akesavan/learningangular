@@ -17,8 +17,8 @@ button{
     display: block;
     border: none;
     border-radius:3px ;
-    background-color:blue;
-    color: white;
+    /* background-color:blue; */
+    /* color: white; */
     font-size:1.3rem ;
 }
 #form{
@@ -40,9 +40,9 @@ p{
     text-align: center;
 }
 p>span{
-    color:rgb(197, 14, 14);
+    /* color:rgb(197, 14, 14); */
     cursor: pointer;
 }
-span{
+/* span{
     color: red;
-}
+} */

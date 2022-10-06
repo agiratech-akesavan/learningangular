@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
 
   output(value:any){
     console.log(value)
-    alert("The Login successfully completed")
+    // alert("The Login successfully completed")
   }
 
   website(){
