@@ -8,6 +8,7 @@ import { Component, OnInit,Input,Output,EventEmitter} from '@angular/core';
 export class TestComponent implements OnInit {
 
   @Input("parentData") public name:any;
+  @Input ("inputage") public inputage:any;
   @Output() public childEvent=new EventEmitter();
   @Output() public input=new EventEmitter();
   public age:number=27;

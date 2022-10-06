@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'interation';
   public name:any="k7";
+  public age:number=24;
   public message:any;
   public my:any
 }
