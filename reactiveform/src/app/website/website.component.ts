@@ -16,7 +16,7 @@ export class WebsiteComponent implements OnInit {
     this.items=this.product.item;
   }
   prod(item:any){
-    this.route.navigateByUrl('website/product/'+item.id);
+    this.route.navigate(['website/product/',item.id]);
   }
 
 }

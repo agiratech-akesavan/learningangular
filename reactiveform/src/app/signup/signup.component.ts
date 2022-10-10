@@ -9,11 +9,12 @@ import { Router } from '@angular/router';
 })
 export class SignupComponent implements OnInit {
 
+  public genderValue:any=[{"name":"male"},{"name":"female"}]
   constructor(private route:Router) { }
 
   login=new FormGroup({
-    firstName:new FormControl('',[Validators.required]),
-    lastName:new FormControl('',[Validators.required]),
+    firstName:new FormControl('',[Validators.required,Validators.minLength(3)]),
+    lastName:new FormControl('',[Validators.required,Validators.minLength(3)]),
     email:new FormControl('',[Validators.required,Validators.email]),
     gender:new FormControl('',[Validators.required]),
     password:new FormControl('',[Validators.required]),
@@ -22,12 +23,16 @@ export class SignupComponent implements OnInit {
     city:new FormControl('')
   });
 
+
+
   ngOnInit(): void {
+
   }
 
   get firstName():any{
     return this.login.get("firstName")
   }
+
 
   get lastName():any{
     return this.login.get("lastName");
@@ -51,10 +56,6 @@ export class SignupComponent implements OnInit {
   value(){
     this.route.navigate(['/login'])
     // console.log("hello")
-  }
-
-  log(){
-    this.route.navigate(['/login'])
   }
 
   output(value:any){

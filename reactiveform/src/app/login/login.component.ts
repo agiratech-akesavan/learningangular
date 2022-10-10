@@ -18,8 +18,12 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public userName:any;
+
   output(value:any){
-    console.log(value)
+    this.userName=value;
+    // console.log(this.userName)
+    // localStorage.setItem('bgcolor', 'red');
     // alert("The Login successfully completed")
   }
 

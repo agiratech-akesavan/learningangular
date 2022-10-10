@@ -1,3 +1,4 @@
+import { identifierName } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from 'src/app/product.service';
@@ -16,7 +17,6 @@ export class ProductComponent implements OnInit {
   ngOnInit(): void {
     this.productid=(this.activeroute.snapshot.params["id"]);
     this.product=(this.productService.item.find(x => x.id == this.productid));
-    
   }
 
 }
