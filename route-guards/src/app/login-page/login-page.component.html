@@ -1,0 +1,22 @@
+
+<div class="row">
+    <div class="col-6">
+        <form #form="ngForm" (ngSubmit)="output(name.value,role.value)">
+            <label for="user">User:</label>
+            <input type="text" name="user" id="user" #name="ngModel" class="form-control" [class.is-invalid]="name.invalid && name.touched" required ngModel>
+            <br>
+            <br>
+            <div>
+                <span *ngIf="name.invalid && name.touched">Please enter your name</span>
+            </div>
+            <label for="role">Role:</label>
+            <input type="text" name="role" id="role" #role="ngModel" class="form-control" [class.is-invalid]="role.invalid && role.touched" required ngModel>
+            <br>
+            <br>
+            <div>
+                <span *ngIf="name.invalid && name.touched">Please enter your role</span>
+            </div>
+            <button class="submit" [disabled]="form.invalid">Submit</button>
+        </form>
+    </div>
+</div>
