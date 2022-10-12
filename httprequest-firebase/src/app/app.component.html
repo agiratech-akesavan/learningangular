@@ -1,0 +1,51 @@
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+<div class="container">
+  <div class="row">
+    <div class="d-flex justify-content-center">
+      <h1>Http request using th fireBase</h1>
+    </div>
+    <div class="col-4 m-3">
+      <form #loginForm="ngForm"  (ngSubmit)="output(loginForm.value)">
+        <div class="pt-3 pb-3">
+          <label for="title">Title</label>
+          <input type="text" class="form-control" [class.is-invalid]="name.invalid && name.touched" #name="ngModel" name="title" required ngModel>
+          <span *ngIf="name.invalid && name.touched">Please the title</span>
+        </div>
+        <div class=" pb-3">
+          <label for="description">Description</label>
+          <input type="text" class="form-control" name="description" required #description="ngModel" [class.is-invalid]="description.invalid && description.touched" ngModel>
+          <span *ngIf="name.invalid && name.touched">Please the title</span>
+        </div>
+        <div>
+          <button class="btn btn-success" [disabled]="loginForm.invalid">Send</button>
+        </div>
+      </form>
+      <div class="mt-3">
+        <button class="btn btn-primary me-2" [disabled]="loadoutput.length < 1" (click)="fetch()">Fetch Data</button>
+        <button class="btn btn-danger disabled">Clear post</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6 output">
+        <h1 class="d-flex justify-content-center" *ngIf="loadoutput.length<1">No data here</h1>
+        <div *ngIf="loadoutput.length >= 1">
+          <ul *ngFor="let x of loadoutput">
+            <li>
+              <h3>
+                {{x.title}}
+              </h3>
+              <p class="ps-3">{{x.description}}</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<router-outlet></router-outlet>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>

@@ -1,3 +1,4 @@
+import { compilePipeFromMetadata } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -11,7 +12,7 @@ export class EditComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  changeBoolean=false;
+  changeBoolean:boolean=false;
   change(name:any){
     if(name == ""){
       this.changeBoolean=false;
@@ -19,5 +20,14 @@ export class EditComponent implements OnInit {
       this.changeBoolean=true;
     }
   }
+
+  canActive(changeBoolean:any){
+    if(confirm("You are not save the update value.You want navigate it.")){
+      return true;
+    }else{
+      return false;
+    }
+  }
+  
 
 }

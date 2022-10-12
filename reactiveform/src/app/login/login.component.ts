@@ -21,7 +21,8 @@ export class LoginComponent implements OnInit {
   public userName:any;
 
   output(value:any){
-    this.userName=value;
+    localStorage.setItem("username",value);
+    // this.userName=value;
     // console.log(this.userName)
     // localStorage.setItem('bgcolor', 'red');
     // alert("The Login successfully completed")

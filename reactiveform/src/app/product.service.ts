@@ -12,4 +12,8 @@ item=[
     {"id":"102","productName":"Clothes","image":"../../assets/image/clothes.jpg"},
     {"id":"103","productName":"Shoes","image":"../../assets/image/shoes.jpg"}
 ]
+
+getuUsername():any{
+  return localStorage.getItem("username")!=null;
+}
 }
