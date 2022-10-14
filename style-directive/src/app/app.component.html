@@ -1,0 +1,19 @@
+
+
+<h1 appAttributeDirective>attribute directive</h1>
+
+<br>
+
+<h1 appRendererDirective>Renderer directive</h1>
+
+
+<div>
+    <input type="radio" name="colors" (click)="color='yellow'">yellow
+    <input type="radio" name="colors" (click)="color='green'">green
+</div>
+
+<div>
+    <p [appHost]="color" defaultColor="violet">color Checking</p>
+</div>
+
+<router-outlet></router-outlet>

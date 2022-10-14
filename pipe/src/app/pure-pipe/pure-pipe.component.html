@@ -1,0 +1,45 @@
+
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 class="d-flex justify-content-center">Pure pipe</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <p>Date: {{date | date}}</p>
+            <h5>Required Date format</h5>
+            <p>date: {{date | date :"full"}}</p>
+            <p>date: {{date | date :"dd-MM-yyyy"}}</p>
+            <p>date: {{date | date :"dd/MMM/yyyy"}}</p>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col">
+            <h3>Number pipe</h3>
+            <p>Number: {{num | number}}</p>
+            <p>Number: {{num | number:"2.1-2"}}</p>
+            <p>Number: {{num | number:"6.0-1"}}</p>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col">
+            <h3>UpperCase,lowercase and titlecase</h3>
+            <p>string: {{name | uppercase}}</p>
+            <p>string: {{name | lowercase}}</p>
+            <p>string: {{name | titlecase}}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h3>Slice Method</h3>
+            <p>slice: {{arr | slice: 0}}</p>
+            <p>slice: {{arr | slice: 1-3}}</p>
+            <p>slice: {{arr | slice: 3}}</p>
+            <p>slice: {{arr | slice: 2}}</p>
+        </div>
+    </div>
+</div>

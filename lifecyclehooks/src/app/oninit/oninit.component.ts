@@ -1,32 +1,31 @@
-import { Component, OnInit,Input,OnDestroy,OnChanges, SimpleChanges} from '@angular/core';
+import { Component, Input, OnInit,OnDestroy, OnChanges, AfterContentInit, AfterViewInit, AfterViewChecked} from '@angular/core';
 
 @Component({
   selector: 'app-oninit',
   templateUrl: './oninit.component.html',
   styleUrls: ['./oninit.component.css']
 })
-export class OninitComponent implements OnInit,OnDestroy,OnChanges {
+export class OninitComponent implements OnInit,OnDestroy,OnChanges, AfterViewInit,AfterViewChecked{ 
 
-  @Input('name') public name:any;
- timeinterval:any =null;
-  constructor() { }
+  @Input("parent") public name:any;
 
-  ngOnChanges(changes:any): void {
-    console.log(changes);
+  ngOnChanges(){
+    console.log("input will be change")
   }
-  ngOnInit(): void {
-    console.log("onInit is working")
 
-    // this.timeinterval = setInterval(()=>{
-    //   console.log(new Date());
-    // },1000);
+  ngAfterViewInit(): void {
+    console.log("parent after view init initiailied");
+  }
+
+  ngAfterViewChecked(): void {
+    console.log("parent after view check")
+  }
+
+  ngOnInit(){
+    console.log("ngOnInit is initialized");
   }
 
   ngOnDestroy(): void {
-    console.log("onDestroy");
-    if(this.timeinterval){
-      clearInterval(this.timeinterval);
-    };
+    console.log("Component will be destroyed")
   }
-
 }

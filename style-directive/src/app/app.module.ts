@@ -1,22 +1,22 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { OninitComponent } from './oninit/oninit.component';
-import { ChildComponentComponent } from './child-component/child-component.component';
+import { AttributeDirectiveDirective } from './directive/attribute-directive.directive';
+import { RendererDirectiveDirective } from './directive/renderer-directive.directive';
+import { HostDirective } from './directive/host.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    OninitComponent,
-    ChildComponentComponent
+    AttributeDirectiveDirective,
+    RendererDirectiveDirective,
+    HostDirective
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

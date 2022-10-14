@@ -15,7 +15,7 @@
                                 <span class="text-danger" *ngIf="name.errors?.['pattern']">Please enter correct email address</span>
                             </div>
                             <label for="password"class="form-label" >password :</label>
-                            <input type="password"  #password="ngModel"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required name="password" id="password" class="form-control" ngModel>
+                            <input type="password"  #password="ngModel"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required name="password" [class.is-invalid]="password.invalid && password.touched" id="password" class="form-control" ngModel>
                             <div *ngIf="password.invalid && password.touched">
                                 <span class="text-danger" *ngIf="password.errors?.['required']">Please Enter your password</span>
                                 <span class="text-danger" *ngIf="password.errors?.['pattern']">Please Enter your password correct pattern</span>

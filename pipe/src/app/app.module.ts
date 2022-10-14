@@ -1,22 +1,23 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { OninitComponent } from './oninit/oninit.component';
-import { ChildComponentComponent } from './child-component/child-component.component';
+import { PurePipeComponent } from './pure-pipe/pure-pipe.component';
+import { InpurePipeComponent } from './inpure-pipe/inpure-pipe.component';
+import { AppendPipe, inpurePipe } from './inpure-pipe/inpure.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    OninitComponent,
-    ChildComponentComponent
+    PurePipeComponent,
+    InpurePipeComponent,
+    AppendPipe,
+    inpurePipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

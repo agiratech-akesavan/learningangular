@@ -6,11 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public name:any="angular";
-
-  show:boolean=false;
-
-  toggle(){
-    this.show=!this.show;
-  }
+  // color:any;
+  title = 'style-directive';
+  color='';
 }

@@ -1,4 +1,9 @@
 
-<h1>onInit checking</h1>
-<app-oninit *ngIf="value" [name]="name"></app-oninit>
-<button (click)="onInit()">generate the init value</button>
+
+<h1>Life Cycle Hooks</h1>
+
+<input type="text" [(ngModel)]="name">
+<button (click)="toggle()">Toggle</button>
+
+<app-oninit *ngIf="show" [parent]="name"></app-oninit>
+<router-outlet></router-outlet>
