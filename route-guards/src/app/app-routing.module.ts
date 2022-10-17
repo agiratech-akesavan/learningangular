@@ -12,6 +12,7 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
 const routes: Routes = [
   {path:"home",component:HomeComponent,canActivate:[AuthGuard],
   canActivateChild:[ChidrenGuard],
+  canDeactivate:[ChidrenGuard],
     children:[
       {path:"edit",component:EditComponent},
       {path:"detail",component:DetailComponent},

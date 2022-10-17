@@ -17,8 +17,5 @@ export class HomeComponent implements OnInit {
     this.route.navigate(["home/user-detail"])
     // console.log("hello")
   }
-  // edit(){
-  //   this.route.navigateByUrl("home/edit");
-  // }
  
 }

@@ -1,8 +1,9 @@
 
 .open{
     display: block;
+    background-color: aqua;
 }
 
-ul{
+.input{
     display: none;
 }
