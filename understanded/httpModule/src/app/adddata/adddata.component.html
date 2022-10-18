@@ -1,0 +1,22 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col">
+            <h4>Add data to the API</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3 ">
+            <form #addForm="ngForm" (ngSubmit)="output(addForm.value)">
+                <label for="name" class="fs-5">Name:</label>
+                <input type="text" class="form-control" name="name" required ngModel>
+                <label for="age" class="fs-5">Age:</label>
+                <input type="text" class="form-control" name="age" required ngModel>
+                <label for="email" class="fs-5">Email:</label>
+                <input type="text" class="form-control" name="email" required ngModel>
+                <div class="d-flex justify-content-end mt-3">
+                    <button class="btn btn-success" [disabled]="addForm.form.invalid">submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

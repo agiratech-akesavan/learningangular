@@ -17,7 +17,7 @@ export class ChildComponent implements OnInit {
     setInterval(()=>{
       let value=new Date();
       this.clock=value.getSeconds();
-      this.changeRef.markForCheck();
+      // this.changeRef.markForCheck();
     },1000);
     // return "child"
   }

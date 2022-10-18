@@ -21,7 +21,7 @@
                                 <span class="text-danger" *ngIf="password.errors?.['pattern']">Please Enter your password correct pattern</span>
                             </div>
                             <!-- <div> -->
-                                <button [disabled]="loginForm.form.invalid" type="submit"  class="btn mt-3 w-100 p-1 btn-primary" (click)="website()">submit</button>
+                                <button [disabled]="loginForm.form.invalid" type="submit"  class="btn mt-3 w-100 p-1 btn-primary" (click)="website(name.value)">submit</button>
                             <!-- </div> -->
                             <p class="mt-3" >Not a Memeber?  <span class="text-danger" (click)="page()">sign page</span></p>
                         </form>

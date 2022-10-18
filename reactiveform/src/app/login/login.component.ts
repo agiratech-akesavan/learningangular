@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 // import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { UsernameService } from '../service/username.service';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private route:Router) { }
+  constructor(private route:Router,private UserNameService:UsernameService) { }
 
   // login=new FormGroup({
   //   user:new FormControl(""),
@@ -26,9 +27,13 @@ export class LoginComponent implements OnInit {
     // console.log(this.userName)
     // localStorage.setItem('bgcolor', 'red');
     // alert("The Login successfully completed")
+    
   }
-
-  website(){
+  
+  
+  
+  website(value:any){
+    this.UserNameService.send(value);
     this.route.navigate(['/website'])
   }
 
