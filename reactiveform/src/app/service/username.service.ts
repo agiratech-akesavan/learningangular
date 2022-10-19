@@ -12,6 +12,5 @@ export class UsernameService {
 
   send(Name:any){
     this.user.next(Name);
-    console.log(Name);
   }
 }

@@ -18,7 +18,6 @@ export class WebsiteComponent implements OnInit {
     this.items=this.product.item;
     this.userNameService.UserName.subscribe(data => {
       this.username=data;
-      console.log(data);
     })
   }
   prod(item:any){
