@@ -9,6 +9,9 @@ import { SignupComponent } from './signup/signup.component';
 import { WebsiteComponent } from './website/website.component';
 import { ProductService } from './product.service';
 import { ProductComponent } from './website/product/product.component';
+import { NavigationComponent } from './navigation/navigation.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -17,12 +20,15 @@ import { ProductComponent } from './website/product/product.component';
     SignupComponent,
     WebsiteComponent,
     ProductComponent,
+    NavigationComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]

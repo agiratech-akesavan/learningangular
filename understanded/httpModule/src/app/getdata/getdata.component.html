@@ -5,3 +5,15 @@
         <li>{{user.name}}</li>
     </ul>
 </div>
+
+<div class="container">
+    <h2>Get the all information about the user</h2>
+    <hr>
+    <ul *ngFor="let user of user">
+        <li class="">
+            <h3>{{user.name}}</h3>
+            <p>UserName: {{user.username}}</p>
+            <p>Email: {{user.email}}</p>
+        </li>
+    </ul>
+</div>

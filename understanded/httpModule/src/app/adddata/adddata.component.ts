@@ -22,7 +22,7 @@ export class AdddataComponent implements OnInit {
       email:form.email,
     }
     this.service.postData(postBody).subscribe(data=>{
-      console.log(data.age),(err:any)=>{
+      alert("successfull data send"),(err:any)=>{
         console.log("this is error",err);
       }
     });
