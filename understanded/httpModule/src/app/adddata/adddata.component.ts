@@ -15,7 +15,6 @@ export class AdddataComponent implements OnInit {
 
   output(form:any){
     // console.log(form);
-
     const postBody={
       name:form.name,
       age:form.age,
@@ -27,6 +26,7 @@ export class AdddataComponent implements OnInit {
       }
     });
 
+    
   }
 
 }

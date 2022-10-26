@@ -1,0 +1,18 @@
+
+.container-fluid{
+    background-color: rgba(39, 49, 140, 0.815);
+    .footer-header{
+        color:white;
+    }
+    .footer-content{
+        color: rgba(255, 255, 255, 0.548);
+        i{
+            margin-left: 10px;
+            margin-right: 10px;
+            font-size: 1.5rem;
+        }
+    }
+    .copyright{
+        color: rgba(255, 255, 255, 0.548);   
+    }
+}

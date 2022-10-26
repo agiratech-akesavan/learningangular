@@ -1,0 +1,16 @@
+
+nav{
+    background-color: rgba(39, 49, 140, 0.815);
+    .navbar-brand{
+        color:rgb(255, 221, 0);
+    }   
+    .navbar-nav{
+        .nav-item{
+            padding-right:1rem;
+            padding-left:1rem;
+            a{
+                color:white;
+            }
+        }
+    }
+}

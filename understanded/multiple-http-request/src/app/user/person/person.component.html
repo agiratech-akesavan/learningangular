@@ -1,0 +1,27 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col d-flex justify-content-center">
+            <h1>User all Information</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <h2>User Id : {{personss.id}}</h2>
+            <h1>User Name : {{personss.name}}</h1>
+            <p>User Email : {{personss.email}}</p>
+            <p>User Phone : {{personss.phone}}</p>
+            <address>
+                <p>Address:<br> 
+                    {{personss.address.street}},<br>
+                    {{personss.address.city}},<br>
+                    {{personss.address.zipcode}},<br>
+                    {{personss.address.suits}}
+                </p>
+            </address>
+            <div class="d-flex justify-content-end">
+                <button mat-flat-button color="accent" (click)="detail()">GoBack</button>
+            </div>
+        </div>
+    </div>
+</div>
